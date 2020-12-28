@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Montserrat:wght@400;600&family=Quicksand:wght@400;700&display=swap" rel="stylesheet"> 
+	<title>Fractal Tree</title>
+</head>
+<body>
+	
+	<div class="side-menu">
+		<h1>HTree</h1>
+
+		<div class="branch">
+
+			<div class="sub-text"> 
+				<div class="line"></div>
+				Branch
+				<div class="line"></div>
+			</div>
+
+			<div class="fGroup">
+				<label> Angle </label>
+				<input type="range" min="1" max="180" class="slider slider-angle" >
+			</div>
+
+			<div class="fGroup">
+				<label> Length </label>
+				<input type="range" min="120" max="180" class="slider slider-length" >
+			</div>
+
+			<div class="fGroup">
+				<label> Width </label>
+				<input type="range" min="1" max="32" class="slider slider-width" >
+			</div>
+
+			<div class="fGroup">
+				<label> Density </label>
+				<input type="range" min="30" max="95" class="slider slider-alpha-width" >
+			</div>
+
+			<div class="color-menu">
+				<label> Branch </label>
+				<input type="color" class="color-picker1" >
+				<div class="spacer"></div>
+				<label> Leaves </label>
+				<input type="color" class="color-picker2" >
+			</div>
+		</div>
+
+
+		<div class="leaf">
+
+			<div class="sub-text"> 
+				<div class="line"></div>
+				Leaf
+				<div class="line"></div>
+			</div>
+
+			<div class="toggle-leaves">
+				<label> Toggle Leaves </label> 
+				No 
+				<div class="toggle-button">
+					<span class="toggle-thumb leavesNo active"></span>
+					<span class="toggle-thumb leavesYes"></span>
+				</div> 
+				Yes
+			</div>
+
+			<div class="fGroup">
+				<label> Angle </label>
+				<input type="range" min="1" max="180" class="slider slider-leaf-angle" >
+			</div>
+
+			<div class="fGroup">
+				<label> Length </label>
+				<input type="range" min="1" max="24" class="slider slider-leaf-length" >
+			</div>
+		</div>
+
+		<div class="shadow">
+			<div class="sub-text"> 
+				<div class="line"></div>
+				Shadow
+				<div class="line"></div>
+			</div>
+
+			<div class="toggle-blur">
+				<label> Toggle Shadow </label> 
+				No 
+				<div class="toggle-button">
+					<span class="toggle-thumb blurNo active"></span>
+					<span class="toggle-thumb blurYes"></span>
+				</div> 
+				Yes
+			</div>
+
+			<div class="fGroup">
+				<label> Radius </label>
+				<input type="range" min="0" max="24" class="slider slider-blur-radius" >
+			</div>
+
+			<div class="color-menu">
+				<label> Branch </label>
+				<input type="color" class="color-picker3" >
+				<div class="spacer"></div>
+				<label> Leaves </label>
+				<input type="color" class="color-picker4" >
+			</div>
+		</div>
+
+		<button class="generate-tree"> Generate Random Tree </button>
+	</div>
+
+	<canvas id="canvas"></canvas>
+
+	<script src="./hTree.js"></script>	
+</body>
+</html>
